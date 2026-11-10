@@ -1,0 +1,1270 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>RentSafe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="RentSafe is a secure device and equipment rental platform that helps owners and renters manage rentals with verification, deposits, agreements, condition records and return monitoring.">
+<meta property="og:title" content="RentSafe | Rent Smarter. Stay Protected.">
+<meta property="og:description" content="Rent electronics and equipment with clearer agreements, documented conditions and return-date monitoring.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"RentSafe","slogan":"Rent Smarter. Stay Protected.","description":"Secure device and equipment rental platform based in the Davao Region, Philippines."}</script>
+<style>
+/* Layout: fintech-style landing page. Hero with a 3D parallax device constellation, a navy "protection" band as the centrepiece, and a live marketplace with working filters and a booking flow. */
+:root{
+  --navy:#102A43; --royal:#2563EB; --emerald:#10B981;
+  --bg:#FFFFFF; --bg2:#F2F6FA; --surface:#FFFFFF; --surface2:#F7FAFD;
+  --fg:#102A43; --muted:#52667A; --line:#DCE5EE;
+  --link:#1D4ED8; --green-text:#047857; --accent-soft:rgba(37,99,235,.09); --green-soft:rgba(16,185,129,.12);
+  --band:#102A43; --band2:#173A5C; --band-fg:#EAF2FA; --band-muted:#A9BED3; --band-line:rgba(255,255,255,.14);
+  --nav-bg:rgba(255,255,255,.78); --glass:rgba(255,255,255,.62); --glass-line:rgba(255,255,255,.7);
+  --shadow:0 1px 2px rgba(16,42,67,.06),0 10px 30px -12px rgba(16,42,67,.18);
+  --shadow-lg:0 2px 4px rgba(16,42,67,.06),0 30px 60px -24px rgba(16,42,67,.32);
+  --warn:#B45309; --warn-bg:rgba(245,158,11,.16); --info:#1D4ED8; --info-bg:rgba(37,99,235,.12); --bad:#B91C1C; --bad-bg:rgba(239,68,68,.12);
+  --tile-a:#E8F0FE; --tile-b:#E3F8F0;
+  --grad:linear-gradient(135deg,#2563EB 0%,#10B981 100%);
+  --display:"Plus Jakarta Sans","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:20px; --r-sm:12px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#08182A; --bg2:#0B2035; --surface:#0F2A43; --surface2:#12314E;
+  --fg:#EAF2FA; --muted:#9DB3C9; --line:#1F3F5D;
+  --link:#7BA7FF; --green-text:#34D399; --accent-soft:rgba(91,141,239,.16); --green-soft:rgba(52,211,153,.14);
+  --band:#0A2036; --band2:#10304D; --band-fg:#EAF2FA; --band-muted:#9DB3C9; --band-line:rgba(255,255,255,.12);
+  --nav-bg:rgba(8,24,42,.78); --glass:rgba(15,42,67,.6); --glass-line:rgba(255,255,255,.1);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -12px rgba(0,0,0,.5);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.3),0 30px 60px -24px rgba(0,0,0,.7);
+  --warn:#FBBF24; --warn-bg:rgba(245,158,11,.18); --info:#8DB1FF; --info-bg:rgba(91,141,239,.2); --bad:#FCA5A5; --bad-bg:rgba(239,68,68,.2);
+  --tile-a:#12335A; --tile-b:#0F3B3A;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#08182A; --bg2:#0B2035; --surface:#0F2A43; --surface2:#12314E;
+  --fg:#EAF2FA; --muted:#9DB3C9; --line:#1F3F5D;
+  --link:#7BA7FF; --green-text:#34D399; --accent-soft:rgba(91,141,239,.16); --green-soft:rgba(52,211,153,.14);
+  --band:#0A2036; --band2:#10304D; --band-fg:#EAF2FA; --band-muted:#9DB3C9; --band-line:rgba(255,255,255,.12);
+  --nav-bg:rgba(8,24,42,.78); --glass:rgba(15,42,67,.6); --glass-line:rgba(255,255,255,.1);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -12px rgba(0,0,0,.5);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.3),0 30px 60px -24px rgba(0,0,0,.7);
+  --warn:#FBBF24; --warn-bg:rgba(245,158,11,.18); --info:#8DB1FF; --info-bg:rgba(91,141,239,.2); --bad:#FCA5A5; --bad-bg:rgba(239,68,68,.2);
+  --tile-a:#12335A; --tile-b:#0F3B3A;
+  color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--royal);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 8px)}
+.wrap{width:100%;max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{scroll-margin-top:84px}
+.sec{padding-block:clamp(64px,9vw,112px)}
+.alt{background:var(--bg2)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-text)}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--grad)}
+.h2{font-size:clamp(1.9rem,4.2vw,3rem);font-weight:800}
+.lead{font-size:clamp(1rem,1.5vw,1.15rem);color:var(--muted);max-width:60ch}
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(32px,5vw,56px);max-width:760px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 24px;border-radius:999px;border:1.5px solid transparent;font-weight:600;font-size:.98rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 26px -10px rgba(37,99,235,.7)}
+.btn-primary:hover{box-shadow:0 16px 32px -10px rgba(16,185,129,.6)}
+.btn-ghost{background:var(--surface);border-color:var(--line);color:var(--fg)}
+.btn-ghost:hover{border-color:var(--royal)}
+.btn-sm{min-height:40px;padding:8px 18px;font-size:.9rem}
+.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* header */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:-.03em}
+.brand .mark{width:42px;height:42px;border-radius:12px;background:#fff;padding:3px;box-shadow:var(--shadow);flex:none}
+.brand .mark img{width:100%;height:100%;object-fit:contain;display:block}
+.brand b{color:var(--navy)}
+.brand i{font-style:normal;color:#17935F}
+:root[data-theme="dark"] .brand b{color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand b{color:#fff}}
+.nav-links{display:flex;gap:4px;margin-left:auto}
+.nav-links a{padding:8px 12px;border-radius:999px;text-decoration:none;font-size:.92rem;font-weight:500;color:var(--muted);transition:background .2s,color .2s}
+.nav-links a:hover,.nav-links a.on{color:var(--fg);background:var(--accent-soft)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.icon-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;transition:border-color .2s,transform .2s}
+.icon-btn:hover{border-color:var(--royal);transform:translateY(-1px)}
+.icon-btn svg{width:20px;height:20px}
+.sun{display:none}
+:root[data-theme="dark"] .sun{display:block}
+:root[data-theme="dark"] .moon{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sun{display:block}:root:not([data-theme="light"]) .moon{display:none}}
+.burger{display:none}
+@media (max-width:980px){
+  .nav-links{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:2px;padding:12px max(16px,env(safe-area-inset-left,0px)) 18px;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);display:none;margin:0}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:14px 12px;font-size:1rem}
+  .burger{display:grid}
+  .nav-actions{margin-left:auto}
+  .nav-cta{display:none}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:clamp(40px,6vw,80px) clamp(56px,7vw,96px);background:radial-gradient(900px 520px at 85% 8%,var(--accent-soft),transparent 62%),radial-gradient(700px 420px at 0% 100%,var(--green-soft),transparent 60%),var(--bg)}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.35;mask-image:radial-gradient(ellipse at 70% 40%,#000 0,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 0,transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem);font-weight:800;letter-spacing:-.035em;margin-block:18px 20px}
+.hero .lead{max-width:54ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trust{margin-top:30px;display:inline-flex;align-items:center;gap:12px;padding:10px 18px 10px 12px;border-radius:999px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--shadow);font-size:.9rem;font-weight:500;max-width:100%}
+.trust svg{width:30px;height:30px;flex:none}
+.pill-note{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--green-soft);color:var(--green-text);font-size:.8rem;font-weight:600}
+.pill-note i{width:8px;height:8px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 4px rgba(16,185,129,.25);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(16,185,129,0)}}
+
+.stage{position:relative;perspective:1400px;aspect-ratio:1/1;width:100%;max-width:600px;margin-inline:auto}
+.scene{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out}
+.scene .lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.lines path{fill:none;stroke:url(#lg);stroke-width:2;stroke-dasharray:6 8;animation:dash 18s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-280}}
+.it{position:absolute;transform-style:preserve-3d;animation:bob 7s ease-in-out infinite}
+.it svg{width:100%;height:auto;display:block;filter:drop-shadow(0 22px 26px rgba(16,42,67,.32))}
+.it:nth-of-type(2){animation-delay:-1.4s}.it:nth-of-type(3){animation-delay:-2.8s}.it:nth-of-type(4){animation-delay:-4.2s}.it:nth-of-type(5){animation-delay:-5.6s}
+@keyframes bob{50%{translate:0 -14px}}
+.it-shield{left:31%;top:28%;width:38%;transform:translateZ(90px);animation-name:none}
+.it-shield svg{filter:drop-shadow(0 0 28px rgba(16,185,129,.55)) drop-shadow(0 24px 30px rgba(37,99,235,.4))}
+.it-laptop{left:2%;top:6%;width:44%;transform:translateZ(40px)}
+.it-phone{right:2%;top:2%;width:27%;transform:translateZ(70px)}
+.it-camera{left:4%;bottom:8%;width:36%;transform:translateZ(60px)}
+.it-console{right:3%;bottom:10%;width:36%;transform:translateZ(30px)}
+.it-tablet{left:40%;bottom:0;width:22%;transform:translateZ(110px)}
+.badge3d{position:absolute;display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:var(--shadow);animation:bob 6s ease-in-out infinite}
+.badge3d svg{width:24px;height:24px}
+.b1{left:46%;top:2%;transform:translateZ(140px)}
+.b2{right:30%;top:46%;transform:translateZ(150px);animation-delay:-2s}
+.b3{left:26%;top:52%;transform:translateZ(130px);animation-delay:-3s}
+.b4{right:8%;top:30%;transform:translateZ(120px);animation-delay:-1s}
+.glow{position:absolute;left:25%;top:22%;width:50%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.35),rgba(16,185,129,.18) 50%,transparent 70%);filter:blur(24px);transform:translateZ(0)}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.stage{max-width:460px}}
+
+/* stats */
+.stats{margin-top:-1px;padding-block:clamp(40px,6vw,72px);background:var(--band);color:var(--band-fg);position:relative;overflow:hidden}
+.stats::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 240px at 10% 0%,rgba(37,99,235,.35),transparent 70%),radial-gradient(600px 240px at 100% 100%,rgba(16,185,129,.28),transparent 70%)}
+.stats .wrap{position:relative}
+.stats-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px 24px;margin-bottom:28px}
+.stats-head h2{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:800}
+.sample-tag{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--warn-bg);color:var(--warn);white-space:nowrap}
+.stats .sample-tag{background:rgba(251,191,36,.18);color:#FCD34D}
+.stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.stat{padding:22px;border-radius:var(--r);background:rgba(255,255,255,.07);border:1px solid var(--band-line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;gap:6px;transition:transform .25s,border-color .25s}
+.stat:hover{transform:translateY(-4px);border-color:rgba(52,211,153,.6)}
+.stat b{font-family:var(--display);font-size:clamp(2rem,3.6vw,2.9rem);font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.05}
+.stat span{color:var(--band-muted);font-size:.95rem}
+.stat .bar{height:4px;border-radius:4px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:6px}
+.stat .bar i{display:block;height:100%;width:var(--w,70%);background:var(--grad);border-radius:4px}
+.stats-note{margin-top:20px;color:var(--band-muted);font-size:.85rem}
+@media (max-width:900px){.stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.stat-grid{grid-template-columns:1fr}}
+
+/* how it works */
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.steps-line{position:absolute;left:12%;right:12%;top:46px;height:4px;border-radius:4px;background:var(--line);overflow:hidden}
+.steps-line i{position:absolute;inset:0;background:var(--grad);transform-origin:left;transform:scaleX(1)}
+.steps-line.run i{animation:grow 1.8s ease-out both}
+@keyframes grow{from{transform:scaleX(0)}}
+.step{position:relative;padding:26px 22px 24px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s,border-color .3s;display:grid;gap:10px;align-content:start}
+.step:hover,.step:focus-within{transform:translateY(-8px) rotate(-.6deg);box-shadow:var(--shadow-lg);border-color:var(--royal)}
+.step .ico{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;background:var(--grad);color:#fff;box-shadow:0 12px 24px -10px rgba(37,99,235,.7);position:relative;z-index:1;transition:transform .35s}
+.step:hover .ico{transform:scale(1.1) rotate(-6deg)}
+.step .ico svg{width:30px;height:30px}
+.step .n{position:absolute;right:18px;top:16px;font-family:var(--display);font-weight:800;font-size:2.6rem;color:var(--line);line-height:1}
+.step h3{font-size:1.25rem;margin-top:8px}
+.step p{color:var(--muted);font-size:.96rem}
+@media (max-width:980px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.steps-line{display:none}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.cat{position:relative;border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);display:grid;grid-template-rows:auto 1fr;transition:transform .3s,box-shadow .3s}
+.cat:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.cat .pic{position:relative;aspect-ratio:16/10;display:grid;place-items:center;background:linear-gradient(135deg,var(--tile-a),var(--tile-b));overflow:hidden}
+.cat .pic::after{content:"";position:absolute;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.22),transparent 70%);transition:transform .5s}
+.cat:hover .pic::after{transform:scale(1.4)}
+.cat .pic svg{position:relative;z-index:1;width:46%;height:auto;transition:transform .5s;filter:drop-shadow(0 16px 18px rgba(16,42,67,.3))}
+.cat:hover .pic svg{transform:scale(1.12) rotate(-3deg)}
+.cat .body{padding:20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cat h3{font-size:1.1rem}
+.cat small{display:block;color:var(--muted);font-size:.85rem;margin-top:2px}
+@media (max-width:900px){.cats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cats{grid-template-columns:1fr}}
+
+/* protection band */
+.protect{position:relative;background:var(--band);color:var(--band-fg);overflow:hidden}
+.protect::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 480px at 90% 0%,rgba(37,99,235,.4),transparent 65%),radial-gradient(700px 420px at 0% 70%,rgba(16,185,129,.22),transparent 65%);pointer-events:none}
+.protect .wrap{position:relative}
+.protect .eyebrow{color:#6EE7B7}
+.p-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);align-items:center;margin-bottom:clamp(36px,5vw,64px)}
+.protect .lead{color:var(--band-muted)}
+.p-top h2{margin-block:14px 18px}
+.mini-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}
+.glass{background:rgba(255,255,255,.08);border:1px solid var(--band-line);border-radius:18px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.timer-card{padding:18px 20px;display:grid;gap:6px;text-align:left}
+.timer-card .lbl,.alert-card .lbl{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--band-muted);font-weight:600}
+.timer-card .t,.alert-card .t{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.4vw,2.4rem);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:.74rem;font-weight:600}
+.chip i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.chip.blue{background:rgba(96,165,250,.2);color:#93C5FD}.chip.green{background:rgba(52,211,153,.2);color:#6EE7B7}.chip.red{background:rgba(248,113,113,.2);color:#FCA5A5}
+.alert-card{padding:18px 20px;display:grid;gap:6px;border-color:rgba(248,113,113,.4);background:rgba(239,68,68,.12)}
+.alert-card .t{color:#FCA5A5}
+.proto-note{margin-top:12px;color:var(--band-muted);font-size:.8rem}
+.shield-vis{position:relative;aspect-ratio:1;max-width:460px;width:100%;margin-inline:auto}
+.shield-vis .ring{position:absolute;inset:4%;border-radius:50%;border:1.5px dashed rgba(255,255,255,.28);animation:spin 40s linear infinite}
+.shield-vis .ring.r2{inset:16%;border-color:rgba(52,211,153,.4);animation-duration:26s;animation-direction:reverse}
+.shield-vis .core{position:absolute;inset:26%;display:grid;place-items:center}
+.shield-vis .core svg{width:100%;height:auto;filter:drop-shadow(0 0 34px rgba(16,185,129,.55))}
+.shield-vis .halo{position:absolute;inset:22%;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,.4),transparent 68%);animation:breathe 4s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.18);opacity:.7}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.orb{position:absolute;inset:0;animation:spin 30s linear infinite}
+.orb span{position:absolute;display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.12);border:1px solid var(--band-line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:spin 30s linear infinite reverse}
+.orb span svg{width:22px;height:22px}
+.orb .o1{left:calc(50% - 23px);top:0}.orb .o2{right:2%;top:50%;margin-top:-23px}.orb .o3{left:calc(50% - 23px);bottom:0}.orb .o4{left:2%;top:50%;margin-top:-23px}
+.draw{stroke-dasharray:60;stroke-dashoffset:0}
+.shield-vis .draw{animation:tick 4s ease-in-out infinite}
+@keyframes tick{0%{stroke-dashoffset:60}30%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:60}}
+@media (max-width:900px){.p-top{grid-template-columns:1fr}.shield-vis{max-width:320px;order:-1}}
+@media (max-width:480px){.mini-row{grid-template-columns:1fr}}
+
+.feat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.feat{position:relative;padding:26px;border-radius:var(--r);background:rgba(255,255,255,.06);border:1px solid var(--band-line);display:grid;gap:12px;align-content:start;overflow:hidden;transition:transform .3s,border-color .3s,background .3s}
+.feat::after{content:"";position:absolute;inset:auto -30% -60% auto;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,.3),transparent 70%);opacity:0;transition:opacity .4s}
+.feat:hover{transform:translateY(-6px);border-color:rgba(52,211,153,.6);background:rgba(255,255,255,.1)}
+.feat:hover::after{opacity:1}
+.feat .fi{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(37,99,235,.55),rgba(16,185,129,.5));box-shadow:0 0 24px -4px rgba(16,185,129,.5)}
+.feat .fi svg{width:28px;height:28px}
+.feat h3{font-size:1.15rem}
+.feat p{color:var(--band-muted);font-size:.95rem}
+.feat:hover .draw,.feat.in .draw{animation:tick2 1.2s ease-out both}
+@keyframes tick2{from{stroke-dashoffset:60}}
+@media (max-width:980px){.feat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.feat-grid{grid-template-columns:1fr}}
+
+.proto{margin-top:clamp(40px,6vw,72px)}
+.tabs{display:inline-flex;padding:5px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--band-line);gap:4px;margin-block:14px 20px}
+.tabs button{border:0;background:transparent;padding:9px 20px;border-radius:999px;font-weight:600;font-size:.92rem;color:var(--band-muted)}
+.tabs button[aria-selected="true"]{background:var(--grad);color:#fff}
+.browser{border-radius:16px;overflow:hidden;border:1px solid var(--band-line);box-shadow:0 40px 80px -30px rgba(0,0,0,.6);background:#fff}
+.browser .bar{display:flex;gap:6px;padding:10px 14px;background:#E9EEF4}
+.browser .bar i{width:10px;height:10px;border-radius:50%;background:#C3CEDA}
+.browser img{display:block;width:100%;height:auto}
+
+/* why */
+.cmp{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
+.cmp-head,.cmp-row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.1fr) minmax(0,1.3fr)}
+.cmp-head{background:var(--bg2);font-family:var(--display);font-weight:700}
+.cmp-head>div{padding:18px 22px}
+.cmp-head .us{background:var(--grad);color:#fff}
+.cmp-row{border-top:1px solid var(--line)}
+.cmp-row>div{padding:20px 22px;display:flex;gap:12px;align-items:flex-start}
+.cmp-row .topic{font-weight:700;font-family:var(--display)}
+.cmp-row .them{color:var(--muted)}
+.cmp-row .us{background:var(--green-soft)}
+.cmp-row .x{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--bad-bg);color:var(--bad);margin-top:1px}
+.cmp-row .ok{flex:none;width:24px;height:24px;border-radius:50%;background:var(--emerald);display:grid;place-items:center;margin-top:1px}
+.cmp-row svg{width:14px;height:14px}
+.cmp .tk{stroke-dasharray:24;stroke-dashoffset:0}
+.cmp.go .tk{animation:tick3 .6s ease-out both;animation-delay:calc(var(--i)*.12s)}
+@keyframes tick3{from{stroke-dashoffset:24}}
+.foot-note{margin-top:14px;color:var(--muted);font-size:.85rem}
+@media (max-width:760px){
+  .cmp-head{display:none}
+  .cmp-row{grid-template-columns:1fr}
+  .cmp-row>div{padding:14px 18px}
+  .cmp-row .topic{padding-top:18px;font-size:1.05rem}
+  .cmp-row .them::before,.cmp-row .us::before{content:none}
+}
+
+/* marketplace */
+.filters{display:grid;gap:16px;padding:18px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);margin-bottom:22px}
+.f-row{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,.8fr);gap:14px;align-items:end}
+.field{display:grid;gap:6px;min-width:0}
+.field label,.field .lab{font-size:.78rem;font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.input,.select{width:100%;min-height:46px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface2);color:var(--fg);padding:10px 14px;font:inherit;transition:border-color .2s}
+.input:focus,.select:focus{border-color:var(--royal);outline:none;box-shadow:0 0 0 4px var(--accent-soft)}
+.search{position:relative}
+.search svg{position:absolute;left:14px;top:50%;translate:0 -50%;width:18px;height:18px;color:var(--muted);pointer-events:none}
+.search .input{padding-left:42px}
+.range{display:flex;align-items:center;gap:12px}
+.range input{flex:1;accent-color:var(--royal);min-width:0}
+.range output{min-width:64px;font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fc{border:1.5px solid var(--line);background:var(--surface2);padding:8px 16px;border-radius:999px;font-size:.9rem;font-weight:500;transition:all .2s}
+.fc:hover{border-color:var(--royal)}
+.fc[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+:root[data-theme="dark"] .fc[aria-pressed="true"]{background:var(--royal);border-color:var(--royal)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fc[aria-pressed="true"]{background:var(--royal);border-color:var(--royal)}}
+.check{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:500;margin-left:auto}
+.check input{width:18px;height:18px;accent-color:var(--emerald)}
+.result-bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center;margin-bottom:18px;color:var(--muted);font-size:.92rem}
+.link-btn{background:none;border:0;color:var(--link);font-weight:600;padding:4px 2px;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:820px){.f-row{grid-template-columns:1fr 1fr}.f-row .search-f{grid-column:1/-1}}
+@media (max-width:480px){.f-row{grid-template-columns:1fr}.check{margin-left:0}}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:20px}
+.card{display:grid;grid-template-rows:auto 1fr;border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.card .pic{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,var(--tile-a),var(--tile-b));display:grid;place-items:center}
+.card .pic svg{width:58%;height:auto;transition:transform .5s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 16px 16px rgba(16,42,67,.3))}
+.card:hover .pic svg{transform:scale(1.18)}
+.card .tags{position:absolute;left:12px;right:12px;top:12px;display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.st{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:.74rem;font-weight:700;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.st i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.st.available{background:rgba(16,185,129,.2);color:var(--green-text)}
+.st.rented{background:var(--warn-bg);color:var(--warn)}
+.st.reserved{background:var(--info-bg);color:var(--info)}
+.demo-tag{padding:4px 9px;border-radius:999px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--surface);color:var(--muted);border:1px solid var(--line)}
+.card .info{padding:18px;display:grid;gap:10px;align-content:start;grid-template-rows:auto auto 1fr auto auto}
+.card h3{font-size:1.08rem;line-height:1.25}
+.card .desc{color:var(--muted);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{display:flex;align-items:baseline;gap:6px}
+.price b{font-family:var(--display);font-size:1.5rem;font-weight:800;font-variant-numeric:tabular-nums}
+.price span{color:var(--muted);font-size:.85rem}
+.owner{display:flex;align-items:center;gap:10px;padding-top:12px;border-top:1px dashed var(--line);font-size:.84rem;min-width:0}
+.av{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:.8rem;background:var(--grad)}
+.owner div{min-width:0;line-height:1.3}
+.owner b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.owner small{color:var(--muted)}
+.card .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.card .acts .btn{padding-inline:10px;min-height:42px;font-size:.88rem}
+.empty{grid-column:1/-1;padding:56px 20px;text-align:center;border:2px dashed var(--line);border-radius:var(--r);color:var(--muted);display:grid;gap:10px;justify-items:center}
+.skel{height:420px;border-radius:var(--r);background:linear-gradient(100deg,var(--bg2) 30%,var(--surface) 50%,var(--bg2) 70%);background-size:300% 100%;animation:shim 1.1s linear infinite;border:1px solid var(--line)}
+@keyframes shim{to{background-position:-300% 0}}
+
+/* testimonials */
+.car-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
+.car-ctl{display:flex;gap:10px}
+.track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.tcard{flex:0 0 min(86%,400px);scroll-snap-align:start;padding:26px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);display:grid;gap:16px;align-content:space-between;transition:transform .3s}
+.tcard:hover{transform:translateY(-4px)}
+.stars{display:flex;gap:2px;color:#F59E0B}
+.stars svg{width:18px;height:18px}
+.tcard blockquote{margin:0;font-size:1.02rem}
+.who{display:flex;align-items:center;gap:12px}
+.who .av{width:46px;height:46px;font-size:.95rem}
+.who b{display:block;font-family:var(--display)}
+.who small{color:var(--muted)}
+.dots{display:flex;gap:8px;margin-top:4px}
+.dots button{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:var(--line);transition:all .25s}
+.dots button[aria-current="true"]{width:28px;border-radius:6px;background:var(--royal)}
+
+/* partner + about */
+.plans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
+.plan{display:grid;gap:14px;align-content:start;padding:26px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .3s}
+.plan:hover{transform:translateY(-6px)}
+.plan.pop{background:linear-gradient(160deg,var(--navy),#1B4F8A);color:#fff;border-color:transparent;box-shadow:var(--shadow-lg)}
+.plan small{font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.7rem;opacity:.75}
+.plan h3{font-size:1.3rem}
+.plan .pr{font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:-.03em}
+.plan .pr span{font-size:.9rem;font-weight:500;opacity:.7;letter-spacing:0}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.92rem}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li svg{flex:none;width:18px;height:18px;color:var(--emerald);margin-top:3px}
+.plan p{font-size:.92rem;opacity:.85}
+.plan .btn{margin-top:auto}
+.plan.pop .btn-ghost{background:#fff;color:var(--navy);border-color:#fff}
+@media (max-width:1040px){.plans{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.plans{grid-template-columns:1fr}}
+.about{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.about .ph{position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3.4}
+.about .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.about .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(16,42,67,.6))}
+.about .cap{position:absolute;left:16px;bottom:14px;z-index:1;color:#fff;font-size:.8rem}
+.about-copy{display:grid;gap:18px}
+.sdg{display:flex;flex-wrap:wrap;gap:10px}
+.sdg span{padding:8px 14px;border-radius:12px;font-size:.84rem;font-weight:600;border:1px solid var(--line);background:var(--surface)}
+.sdg b{color:var(--green-text)}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+
+/* cta */
+.cta{background:linear-gradient(120deg,#1D4ED8 0%,#2563EB 30%,#0E9F78 100%);color:#fff;position:relative;overflow:hidden;padding-block:clamp(64px,8vw,104px)}
+.cta::before,.cta::after{content:"";position:absolute;border-radius:50%;border:1.5px solid rgba(255,255,255,.2)}
+.cta::before{width:520px;height:520px;right:-120px;top:-200px}
+.cta::after{width:360px;height:360px;right:60px;bottom:-220px}
+.cta .wrap{position:relative;display:flex;flex-wrap:wrap;gap:28px 48px;justify-content:space-between;align-items:center}
+.cta h2{font-size:clamp(1.9rem,4.4vw,3.2rem);font-weight:800;max-width:18ch}
+.cta p{margin-top:14px;max-width:46ch;color:rgba(255,255,255,.88);font-size:1.1rem}
+.cta .btn-w{background:#fff;color:#0B3A7A}
+.cta .btn-o{background:transparent;border-color:rgba(255,255,255,.7);color:#fff}
+.cta .btn-o:hover{background:rgba(255,255,255,.14)}
+
+/* faq */
+.faq-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,72px);align-items:start}
+.faq-wrap .sec-head{position:sticky;top:100px;margin-bottom:0}
+.acc{display:grid;gap:12px}
+.q{border-radius:16px;border:1px solid var(--line);background:var(--surface);overflow:hidden;transition:border-color .25s,box-shadow .25s}
+.q.open{border-color:var(--royal);box-shadow:var(--shadow)}
+.q button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;border:0;background:none;padding:20px 22px;font-family:var(--display);font-weight:700;font-size:1.04rem}
+.q .pm{flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;transition:transform .3s,background .3s}
+.q .pm svg{width:14px;height:14px;color:var(--link)}
+.q.open .pm{transform:rotate(45deg);background:var(--grad)}
+.q.open .pm svg{color:#fff}
+.q .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.q.open .a{grid-template-rows:1fr}
+.q .a>div{overflow:hidden}
+.q .a p{padding:0 22px 22px;color:var(--muted)}
+@media (max-width:900px){.faq-wrap{grid-template-columns:1fr}.faq-wrap .sec-head{position:static}}
+
+/* footer */
+footer{background:var(--band);color:var(--band-fg);padding-block:clamp(48px,6vw,72px) 28px}
+.f-grid{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(2,minmax(0,.7fr)) minmax(0,.9fr);gap:36px}
+footer .brand b{color:#fff}
+footer p.desc{margin-top:16px;color:var(--band-muted);max-width:38ch;font-size:.95rem}
+footer h4{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--band-muted);margin-bottom:14px;font-family:var(--body);font-weight:600}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+footer a,footer .fl{color:var(--band-fg);text-decoration:none;opacity:.9;font-size:.95rem;background:none;border:0;padding:0;text-align:left}
+footer a:hover,footer .fl:hover{color:#6EE7B7;opacity:1}
+.soc{display:flex;gap:10px;flex-wrap:wrap}
+.soc button{width:42px;height:42px;border-radius:50%;border:1px solid var(--band-line);background:rgba(255,255,255,.06);display:grid;place-items:center;color:#fff;transition:background .2s,transform .2s}
+.soc button:hover{background:var(--grad);transform:translateY(-2px)}
+.soc svg{width:19px;height:19px}
+.tagline{font-family:var(--display);font-weight:800;font-size:1.05rem;margin-bottom:16px}
+.f-bot{margin-top:40px;padding-top:22px;border-top:1px solid var(--band-line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;color:var(--band-muted);font-size:.84rem}
+@media (max-width:900px){.f-grid{grid-template-columns:1fr 1fr}.f-grid>:first-child{grid-column:1/-1}}
+
+/* dialogs, toast, support */
+dialog{border:0;padding:0;border-radius:24px;background:var(--surface);color:var(--fg);width:min(760px,calc(100% - 24px));max-height:calc(100% - 24px);box-shadow:0 40px 100px -20px rgba(0,0,0,.55);overflow:auto}
+dialog::backdrop{background:rgba(8,24,42,.62);backdrop-filter:blur(4px)}
+dialog[open]{animation:dlg .28s cubic-bezier(.2,.8,.2,1)}
+@keyframes dlg{from{opacity:0;transform:translateY(18px) scale(.97)}}
+.dlg-x{position:absolute;right:14px;top:14px;z-index:2}
+.d-pic{aspect-ratio:16/8;display:grid;place-items:center;background:linear-gradient(135deg,var(--tile-a),var(--tile-b))}
+.d-pic svg{height:78%;width:auto}
+.d-body{padding:clamp(20px,4vw,34px);display:grid;gap:18px}
+.d-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:start}
+.d-top h3{font-size:1.6rem}
+.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.spec div{padding:12px 14px;border-radius:12px;background:var(--bg2);font-size:.88rem}
+.spec small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+.prot{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;font-size:.92rem}
+.prot li{display:flex;gap:10px;align-items:flex-start}
+.prot svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--emerald)}
+.d-act{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.note{padding:12px 14px;border-radius:12px;background:var(--warn-bg);color:var(--warn);font-size:.86rem}
+.stepper{display:flex;gap:8px;margin-bottom:6px}
+.stepper span{flex:1;height:6px;border-radius:6px;background:var(--line);transition:background .3s}
+.stepper span.on{background:var(--grad)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-grid .full{grid-column:1/-1}
+@media (max-width:520px){.form-grid{grid-template-columns:1fr}}
+.sum{padding:16px;border-radius:14px;background:var(--bg2);display:grid;gap:8px;font-size:.92rem}
+.sum div{display:flex;justify-content:space-between;gap:12px}
+.sum .tot{font-weight:800;font-size:1.05rem;padding-top:8px;border-top:1px dashed var(--line)}
+.agree{display:grid;gap:12px}
+.agree label{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1.5px solid var(--line);border-radius:14px;font-size:.92rem;cursor:pointer}
+.agree input{width:20px;height:20px;margin-top:2px;accent-color:var(--emerald);flex:none}
+.done{display:grid;gap:14px;justify-items:center;text-align:center;padding-block:12px}
+.done .big{width:84px;height:84px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 0 0 12px var(--green-soft)}
+.done .big svg{width:42px;height:42px}
+.ref{font-family:var(--display);font-weight:800;letter-spacing:.08em;padding:8px 16px;border-radius:12px;background:var(--bg2)}
+.err{color:var(--bad);font-size:.85rem;min-height:1.2em}
+
+#toasts{position:fixed;left:50%;translate:-50% 0;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:200;display:grid;gap:10px;width:min(440px,calc(100% - 32px));pointer-events:none}
+.toast{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:16px;background:var(--navy);color:#fff;box-shadow:var(--shadow-lg);font-size:.92rem;animation:toast .35s cubic-bezier(.2,.8,.2,1);pointer-events:auto;border:1px solid rgba(255,255,255,.14)}
+:root[data-theme="dark"] .toast{background:#16395A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .toast{background:#16395A}}
+.toast svg{flex:none;width:20px;height:20px;color:#34D399;margin-top:1px}
+.toast.out{opacity:0;transform:translateY(10px);transition:all .3s}
+@keyframes toast{from{opacity:0;transform:translateY(16px)}}
+
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;width:58px;height:58px;border-radius:50%;border:0;background:var(--grad);color:#fff;display:grid;place-items:center;box-shadow:0 16px 34px -10px rgba(37,99,235,.8);transition:transform .25s}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:26px;height:26px}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--emerald);animation:ping 2.6s ease-out infinite}
+@keyframes ping{from{transform:scale(1);opacity:.8}to{transform:scale(1.6);opacity:0}}
+.support{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:70;width:min(340px,calc(100% - 36px));padding:20px;border-radius:20px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-lg);display:grid;gap:12px;animation:dlg .25s ease-out}
+.support h4{font-size:1.05rem}
+.support p{color:var(--muted);font-size:.88rem}
+
+/* reveal: resting state is fully visible; the animation only plays when scrolled into view */
+.rv{animation:rise .7s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0s)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .scene{transform:none!important}
+}
+</style>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- icon + device sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#102A43"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E4ECF4"/><stop offset="1" stop-color="#9FB2C6"/></linearGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B4F73"/><stop offset="1" stop-color="#0F2438"/></linearGradient>
+    <linearGradient id="g-shield" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#10B981"/></linearGradient>
+    <radialGradient id="g-lens" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#5B8DEF"/><stop offset=".5" stop-color="#143A66"/><stop offset="1" stop-color="#07131F"/></radialGradient>
+
+    <symbol id="d-laptop" viewBox="0 0 200 150">
+      <rect x="28" y="8" width="144" height="98" rx="9" fill="url(#g-body)"/>
+      <rect x="35" y="15" width="130" height="84" rx="4" fill="url(#g-screen)"/>
+      <path d="M100 32l16 6v10c0 10-7 16-16 20-9-4-16-10-16-20V38z" fill="#10B981" opacity=".95"/>
+      <path d="M92 50l6 6 11-12" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="46" y="80" width="40" height="5" rx="2.5" fill="#fff" opacity=".35"/><rect x="118" y="80" width="30" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+      <path d="M8 110h184l-8 14c-1 3-4 4-7 4H23c-3 0-6-1-7-4z" fill="url(#g-metal)"/>
+      <rect x="82" y="110" width="36" height="5" rx="2.5" fill="#7F93A8"/>
+    </symbol>
+    <symbol id="d-phone" viewBox="0 0 200 150">
+      <rect x="74" y="2" width="52" height="146" rx="12" fill="url(#g-body)"/>
+      <rect x="79" y="8" width="42" height="134" rx="8" fill="url(#g-screen)"/>
+      <rect x="92" y="11" width="16" height="4" rx="2" fill="#07131F"/>
+      <circle cx="100" cy="52" r="13" fill="#10B981"/><rect x="95" y="50" width="10" height="8" rx="2" fill="#fff"/><path d="M96.5 50v-3a3.5 3.5 0 017 0v3" fill="none" stroke="#fff" stroke-width="1.8"/>
+      <rect x="86" y="80" width="28" height="5" rx="2.5" fill="#fff" opacity=".5"/><rect x="86" y="91" width="20" height="5" rx="2.5" fill="#fff" opacity=".3"/>
+      <rect x="86" y="118" width="28" height="10" rx="5" fill="#10B981"/>
+    </symbol>
+    <symbol id="d-camera" viewBox="0 0 200 150">
+      <path d="M52 40l10-14h32l8 14z" fill="#16314C"/>
+      <rect x="14" y="38" width="172" height="86" rx="14" fill="url(#g-body)"/>
+      <rect x="14" y="38" width="172" height="20" rx="10" fill="#fff" opacity=".07"/>
+      <circle cx="100" cy="82" r="38" fill="#0A1A2B"/><circle cx="100" cy="82" r="31" fill="url(#g-lens)"/><circle cx="100" cy="82" r="14" fill="#07131F"/><circle cx="92" cy="74" r="5" fill="#fff" opacity=".55"/>
+      <circle cx="158" cy="54" r="6" fill="#10B981"/><rect x="28" y="50" width="26" height="10" rx="5" fill="#fff" opacity=".18"/>
+      <rect x="150" y="26" width="22" height="12" rx="4" fill="#C9D6E3"/>
+    </symbol>
+    <symbol id="d-console" viewBox="0 0 200 150">
+      <path d="M44 42h112c24 0 38 24 42 54 2 14-8 22-20 20-10-1-16-8-22-18H44c-6 10-12 17-22 18C10 118 0 110 2 96c4-30 18-54 42-54z" fill="url(#g-body)"/>
+      <rect x="30" y="66" width="28" height="9" rx="3" fill="#E4ECF4"/><rect x="39.5" y="56.5" width="9" height="28" rx="3" fill="#E4ECF4"/>
+      <circle cx="146" cy="62" r="6" fill="#10B981"/><circle cx="162" cy="74" r="6" fill="#2563EB"/><circle cx="130" cy="74" r="6" fill="#F59E0B"/><circle cx="146" cy="86" r="6" fill="#EF4444"/>
+      <circle cx="78" cy="94" r="10" fill="#0A1A2B" stroke="#4B6B8C" stroke-width="2"/><circle cx="122" cy="94" r="10" fill="#0A1A2B" stroke="#4B6B8C" stroke-width="2"/>
+      <rect x="90" y="62" width="20" height="8" rx="4" fill="#fff" opacity=".3"/>
+    </symbol>
+    <symbol id="d-tablet" viewBox="0 0 200 150">
+      <rect x="40" y="6" width="120" height="138" rx="14" fill="url(#g-body)"/>
+      <rect x="47" y="13" width="106" height="124" rx="8" fill="url(#g-screen)"/>
+      <circle cx="100" cy="9.5" r="1.8" fill="#07131F"/>
+      <rect x="60" y="30" width="80" height="44" rx="6" fill="#fff" opacity=".16"/><path d="M82 62l10-14 8 9 8-12 12 17z" fill="#10B981" opacity=".9"/>
+      <rect x="60" y="86" width="56" height="6" rx="3" fill="#fff" opacity=".5"/><rect x="60" y="99" width="78" height="6" rx="3" fill="#fff" opacity=".28"/><rect x="60" y="112" width="40" height="6" rx="3" fill="#fff" opacity=".2"/>
+      <rect x="164" y="30" width="6" height="90" rx="3" fill="#C9D6E3"/>
+    </symbol>
+    <symbol id="d-drone" viewBox="0 0 200 150">
+      <path d="M62 62L30 36M138 62l32-26M62 88l-32 26M138 88l32 26" stroke="#16314C" stroke-width="7" stroke-linecap="round"/>
+      <ellipse cx="30" cy="34" rx="26" ry="6" fill="#9FB2C6"/><ellipse cx="170" cy="34" rx="26" ry="6" fill="#9FB2C6"/><ellipse cx="30" cy="116" rx="26" ry="6" fill="#9FB2C6"/><ellipse cx="170" cy="116" rx="26" ry="6" fill="#9FB2C6"/>
+      <rect x="62" y="56" width="76" height="42" rx="16" fill="url(#g-body)"/>
+      <circle cx="100" cy="106" r="11" fill="#0A1A2B"/><circle cx="100" cy="106" r="6" fill="url(#g-lens)"/>
+      <circle cx="82" cy="70" r="4" fill="#10B981"/><circle cx="118" cy="70" r="4" fill="#2563EB"/>
+    </symbol>
+    <symbol id="d-speaker" viewBox="0 0 200 150">
+      <rect x="54" y="8" width="92" height="134" rx="22" fill="url(#g-body)"/>
+      <circle cx="100" cy="50" r="19" fill="#0A1A2B" stroke="#4B6B8C" stroke-width="3"/><circle cx="100" cy="50" r="7" fill="#2563EB"/>
+      <circle cx="100" cy="102" r="26" fill="#0A1A2B" stroke="#4B6B8C" stroke-width="3"/><circle cx="100" cy="102" r="11" fill="#10B981" opacity=".9"/>
+      <rect x="86" y="18" width="28" height="4" rx="2" fill="#fff" opacity=".4"/>
+    </symbol>
+    <symbol id="d-projector" viewBox="0 0 200 150">
+      <rect x="14" y="40" width="172" height="76" rx="18" fill="url(#g-body)"/>
+      <circle cx="132" cy="78" r="30" fill="#0A1A2B"/><circle cx="132" cy="78" r="23" fill="url(#g-lens)"/><circle cx="124" cy="70" r="5" fill="#fff" opacity=".5"/>
+      <rect x="30" y="58" width="50" height="6" rx="3" fill="#fff" opacity=".3"/><rect x="30" y="72" width="36" height="6" rx="3" fill="#fff" opacity=".2"/><circle cx="38" cy="98" r="5" fill="#10B981"/>
+      <rect x="40" y="116" width="16" height="10" rx="3" fill="#16314C"/><rect x="144" y="116" width="16" height="10" rx="3" fill="#16314C"/>
+    </symbol>
+    <symbol id="d-shield" viewBox="0 0 120 140">
+      <path d="M60 4l50 18v38c0 36-22 62-50 76C32 122 10 96 10 60V22z" fill="url(#g-shield)"/>
+      <path d="M60 14l40 14.5V60c0 28-17 49-40 61-23-12-40-33-40-61V28.5z" fill="#fff" opacity=".12"/>
+      <path d="M38 68l17 17 29-34" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="RentSafe home"><span class="mark"><img src="img/logo-mark.png" alt="" width="42" height="42"></span><span><b>Rent</b><i>Safe</i></span></a>
+    <nav class="nav-links" id="navlinks" aria-label="Main">
+      <a href="#home">Home</a><a href="#how">How it works</a><a href="#categories">Categories</a><a href="#protection">Protection</a><a href="#rentals">Rentals</a><a href="#partner">Partners</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm nav-cta" href="#rentals">Explore Rentals</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- 2. HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <span class="pill-note"><i></i>Secure device rental platform · Starting in the Davao Region</span>
+      <h1>Rent What You Need. <span class="grad-text">Protect What Matters.</span></h1>
+      <p class="lead">RentSafe makes renting electronics and equipment safer, smarter, and more reliable. Enjoy worry-free rentals with security features designed to protect both owners and renters.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#rentals">Explore Rentals <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#partner">Become a Rental Partner</a>
+      </div>
+      <div class="trust">
+        <svg viewBox="0 0 120 140" aria-hidden="true"><use href="#d-shield"/></svg>
+        <span>Smarter Rentals. Safer Transactions. Greater Peace of Mind.</span>
+      </div>
+    </div>
+
+    <div class="stage" id="stage" aria-hidden="true">
+      <div class="scene" id="scene">
+        <div class="glow"></div>
+        <svg class="lines" viewBox="0 0 600 600" preserveAspectRatio="none">
+          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#10B981"/></linearGradient></defs>
+          <path d="M300 250C230 200 190 170 150 150"/><path d="M300 250C380 190 440 140 500 100"/>
+          <path d="M300 330C230 390 180 440 140 470"/><path d="M300 330C390 390 440 430 500 470"/><path d="M300 360C300 420 300 470 300 540"/>
+        </svg>
+        <div class="it it-laptop"><svg viewBox="0 0 200 150"><use href="#d-laptop"/></svg></div>
+        <div class="it it-phone"><svg viewBox="0 0 200 150"><use href="#d-phone"/></svg></div>
+        <div class="it it-camera"><svg viewBox="0 0 200 150"><use href="#d-camera"/></svg></div>
+        <div class="it it-console"><svg viewBox="0 0 200 150"><use href="#d-console"/></svg></div>
+        <div class="it it-tablet"><svg viewBox="0 0 200 150"><use href="#d-tablet"/></svg></div>
+        <div class="it it-shield"><svg viewBox="0 0 120 140"><use href="#d-shield"/></svg></div>
+        <div class="badge3d b1"><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>
+        <div class="badge3d b2"><svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div class="badge3d b3"><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div class="badge3d b4"><svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. STATS -->
+<section class="stats" aria-labelledby="stats-h">
+  <div class="wrap">
+    <div class="stats-head">
+      <div><span class="sample-tag">Sample figures</span><h2 id="stats-h" style="margin-top:12px">Trust you can measure, once we launch</h2></div>
+    </div>
+    <div class="stat-grid" id="statGrid">
+      <div class="stat"><b data-count="10000" data-suffix="+">10,000+</b><span>Protected Rental Transactions</span><div class="bar"><i style="--w:86%"></i></div></div>
+      <div class="stat"><b data-count="250" data-suffix="+">250+</b><span>Verified Rental Partners</span><div class="bar"><i style="--w:58%"></i></div></div>
+      <div class="stat"><b data-count="9500" data-suffix="+">9,500+</b><span>Successfully Returned Items</span><div class="bar"><i style="--w:80%"></i></div></div>
+      <div class="stat"><b data-count="5000" data-suffix="+">5,000+</b><span>Satisfied Customers</span><div class="bar"><i style="--w:72%"></i></div></div>
+    </div>
+    <p class="stats-note">These are placeholder values for the design preview. They are not real achievements and will be replaced with live platform data after launch.</p>
+  </div>
+</section>
+
+<!-- 4. HOW IT WORKS -->
+<section class="sec" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">How RentSafe works</span><h2 class="h2" id="how-h">Four steps from browsing to a safe return</h2><p class="lead">Each rental follows the same path, so owners and renters always know what happens next.</p></div>
+    <div class="steps" id="steps">
+      <div class="steps-line" id="stepsLine" aria-hidden="true"><i></i></div>
+      <article class="step" tabindex="0"><span class="n" aria-hidden="true">1</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div><h3>Discover</h3><p>Browse available devices and equipment from rental partners.</p></article>
+      <article class="step" tabindex="0"><span class="n" aria-hidden="true">2</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/><path d="M9 15l2 2 4-4"/></svg></div><h3>Book</h3><p>Select your preferred rental period and submit your booking.</p></article>
+      <article class="step" tabindex="0"><span class="n" aria-hidden="true">3</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h3>Stay Protected</h3><p>Complete the required security and verification procedures.</p></article>
+      <article class="step" tabindex="0"><span class="n" aria-hidden="true">4</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0113.7-5.6L20 8.5M20 4v4.5h-4.5M20 12a8 8 0 01-13.7 5.6L4 15.5M4 20v-4.5h4.5"/></svg></div><h3>Return Safely</h3><p>Return the item on time and complete the rental transaction.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CATEGORIES -->
+<section class="sec alt" id="categories" aria-labelledby="cat-h">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Explore rental categories</span><h2 class="h2" id="cat-h">Find the right gear for the job</h2><p class="lead">From a weekend phone to a full camera kit. Each category opens the matching demonstration listings below.</p></div>
+    <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<!-- 6. PROTECTION -->
+<section class="sec protect" id="protection" aria-labelledby="prot-h">
+  <div class="wrap">
+    <div class="p-top">
+      <div>
+        <span class="eyebrow">Security and protection features</span>
+        <h2 class="h2" id="prot-h">More Than Renting. It's Protection.</h2>
+        <p class="lead">RentSafe brings verification, documentation and monitoring into one rental flow. The goal is to reduce the risk of theft, damage, loss and late returns for everyone involved.</p>
+        <div class="mini-row" aria-label="Prototype preview">
+          <div class="glass timer-card"><span class="lbl">Time remaining · Device 01</span><span class="t" id="liveTimer">00:38:08</span><div class="chips"><span class="chip blue"><i></i>Active</span><span class="chip green"><i></i>Unlocked</span></div></div>
+          <div class="glass alert-card"><span class="lbl" style="color:#FCA5A5">Overdue alert · Device 05</span><span class="t" id="overTimer">+00:12:57</span><div class="chips"><span class="chip red"><i></i>Owner notified</span></div></div>
+        </div>
+        <p class="proto-note">Prototype preview with demonstration data. Lock and tracking behaviour depends on the connected device, connectivity and renter consent.</p>
+      </div>
+      <div class="shield-vis" aria-hidden="true">
+        <div class="ring"></div><div class="ring r2"></div><div class="halo"></div>
+        <div class="core"><svg viewBox="0 0 120 140"><use href="#d-shield"/></svg></div>
+        <div class="orb">
+          <span class="o1"><svg viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></span>
+          <span class="o2"><svg viewBox="0 0 24 24" fill="none" stroke="#93C5FD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span class="o3"><svg viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span class="o4"><svg viewBox="0 0 24 24" fill="none" stroke="#93C5FD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h5"/></svg></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat-grid" id="feats">
+      <article class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="9" cy="11" r="2.3"/><path d="M5.5 16c.6-1.6 2-2.4 3.5-2.4s2.9.8 3.5 2.4M15 10h3.5M15 13.5l1.5 1.5 2.5-3" class="draw"/></svg></div><h3>Identity Verification</h3><p>Help establish trust between renters and owners before a device changes hands.</p></article>
+      <article class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12.5l2.2 2.2L15.5 9.5" class="draw"/></svg></div><h3>Security Deposits</h3><p>Support financial protection against qualifying rental risks, with amounts shown before you book.</p></article>
+      <article class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h4"/><path d="M9.5 18.5l1.5 1.5 3-3.5" class="draw"/></svg></div><h3>Rental Agreements</h3><p>Clearly document rental terms and responsibilities so both sides know what was agreed.</p></article>
+      <article class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/><path d="M10.6 13l1 1 1.9-2.2" class="draw"/></svg></div><h3>Item Condition Documentation</h3><p>Record the condition of equipment before and after rental to settle questions quickly.</p></article>
+      <article class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2" class="draw"/></svg></div><h3>Return Date Monitoring</h3><p>Track deadlines with live countdowns and help prevent overdue returns.</p></article>
+      <article class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5" class="draw"/><path d="M12 17.2v.1"/></svg></div><h3>Damage and Loss Reporting</h3><p>Provide a structured way to report rental incidents, with logs the owner can review.</p></article>
+    </div>
+
+    <div class="proto" id="proto">
+      <span class="eyebrow">Inside the prototype</span>
+      <div class="tabs" role="tablist" aria-label="Prototype screens">
+        <button type="button" role="tab" id="tab-a" aria-selected="true" aria-controls="panel-a">Owner dashboard</button>
+        <button type="button" role="tab" id="tab-r" aria-selected="false" aria-controls="panel-r" tabindex="-1">Renter dashboard</button>
+      </div>
+      <div class="browser" role="tabpanel" id="panel-a" aria-labelledby="tab-a"><div class="bar"><i></i><i></i><i></i></div><img src="img/admin.jpg" alt="RentSafe owner dashboard prototype showing current time, an overdue rental alert and unit counts" width="1100" height="513" loading="lazy"></div>
+      <div class="browser" role="tabpanel" id="panel-r" aria-labelledby="tab-r" hidden><div class="bar"><i></i><i></i><i></i></div><img src="img/renter.jpg" alt="RentSafe renter dashboard prototype showing a countdown, rental status and a Report Damage button" width="1100" height="508" loading="lazy"></div>
+      <p class="proto-note">Screens from the current RentSafe MVP. Names and counts are demonstration data, not real customers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. WHY -->
+<section class="sec" id="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Why choose RentSafe?</span><h2 class="h2" id="why-h">Ordinary rentals run on trust alone. RentSafe adds structure.</h2></div>
+    <div class="cmp" id="cmp">
+      <div class="cmp-head"><div>What matters</div><div>Informal rental</div><div class="us">With RentSafe</div></div>
+      <div class="cmp-row" style="--i:0"><div class="topic">Transaction transparency</div><div class="them"><span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Price, deposit and return time scattered across chats</div><div class="us"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path class="tk" d="M5 12.5l4.5 4.5L19 7"/></svg></span>Price, deposit and return date shown in one booking record</div></div>
+      <div class="cmp-row" style="--i:1"><div class="topic">Rental agreements</div><div class="them"><span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Verbal or ad hoc terms that are easy to dispute</div><div class="us"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path class="tk" d="M5 12.5l4.5 4.5L19 7"/></svg></span>Terms and responsibilities written down before handover</div></div>
+      <div class="cmp-row" style="--i:2"><div class="topic">Renter and owner communication</div><div class="them"><span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Messages spread across apps and easy to lose</div><div class="us"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path class="tk" d="M5 12.5l4.5 4.5L19 7"/></svg></span>Status updates and notifications for both sides in one place</div></div>
+      <div class="cmp-row" style="--i:3"><div class="topic">Item condition</div><div class="them"><span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>No shared record of how the device looked before</div><div class="us"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path class="tk" d="M5 12.5l4.5 4.5L19 7"/></svg></span>Condition documented before and after the rental</div></div>
+      <div class="cmp-row" style="--i:4"><div class="topic">Security procedures</div><div class="them"><span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Each owner improvises their own checks</div><div class="us"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path class="tk" d="M5 12.5l4.5 4.5L19 7"/></svg></span>A structured verification and deposit procedure for every rental</div></div>
+      <div class="cmp-row" style="--i:5"><div class="topic">Reliability</div><div class="them"><span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Late returns noticed only after the deadline has passed</div><div class="us"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path class="tk" d="M5 12.5l4.5 4.5L19 7"/></svg></span>Deadlines tracked, with overdue alerts sent to the owner</div></div>
+    </div>
+    <p class="foot-note">Describes the intended RentSafe rental process. Features are introduced as the platform rolls out.</p>
+  </div>
+</section>
+
+<!-- 8. MARKETPLACE -->
+<section class="sec alt" id="rentals" aria-labelledby="rent-h">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Featured rentals</span><h2 class="h2" id="rent-h">Browse demonstration listings</h2><p class="lead">These sample products show how the marketplace will work. Listings, prices and partners are placeholders, and no booking is processed yet.</p></div>
+    <form class="filters" id="filters" role="search" aria-label="Filter rentals" onsubmit="return false">
+      <div class="f-row">
+        <div class="field search-f"><label for="q">Search</label><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input class="input" id="q" type="search" placeholder="Search laptops, cameras, drones…" autocomplete="off"></div></div>
+        <div class="field"><label for="price">Max daily price</label><div class="range"><input id="price" type="range" min="100" max="1500" step="50" value="1500"><output id="priceOut" for="price">₱1,500</output></div></div>
+        <div class="field"><label for="sort">Sort by</label><select class="select" id="sort"><option value="feat">Featured</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option><option value="az">Name: A to Z</option></select></div>
+      </div>
+      <div class="chip-row" id="chips" role="group" aria-label="Category"></div>
+      <div class="chip-row"><label class="check"><input type="checkbox" id="avail"> Show available items only</label></div>
+    </form>
+    <div class="result-bar"><span id="count" aria-live="polite"></span><button class="link-btn" type="button" id="reset">Reset filters</button></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- 9. TESTIMONIALS -->
+<section class="sec" id="stories" aria-labelledby="t-h">
+  <div class="wrap">
+    <div class="car-head sec-head" style="max-width:none">
+      <div style="display:grid;gap:14px;max-width:680px"><span class="eyebrow">Customer experiences</span><h2 class="h2" id="t-h">What renters and owners could say</h2><p class="lead">Sample testimonials, clearly labeled, until real customer feedback is available.</p></div>
+      <div class="car-ctl"><button class="icon-btn" id="prev" type="button" aria-label="Previous testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="icon-btn" id="next" type="button" aria-label="Next testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+    <div class="track" id="track" tabindex="0" role="region" aria-label="Sample testimonials"></div>
+    <div class="dots" id="dots"></div>
+  </div>
+</section>
+
+<!-- partner plans -->
+<section class="sec alt" id="partner" aria-labelledby="pt-h">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Become a rental partner</span><h2 class="h2" id="pt-h">List your equipment and keep an eye on it</h2><p class="lead">Freelancers, shops and equipment providers can start free and add tracking and fleet controls as they grow.</p></div>
+    <div class="plans">
+      <article class="plan"><small>Individual / Entry</small><h3>Freemium</h3><div class="pr">Free <span>/ limited</span></div><p>Basic access for casual lenders testing the platform with minimal inventory.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Up to 2 active device listings</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Basic status tracking and manual logs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Standard damage reporting</li></ul><button class="btn btn-ghost" type="button" data-partner="Freemium">Join the waitlist</button></article>
+      <article class="plan pop"><small>Individual Pro</small><h3>Owner Plus</h3><div class="pr">₱99 <span>/ month</span></div><p>Ideal for freelancers and individual lenders who require automated tracking.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>GPS device tracking</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Automated overdue alerts</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Up to 10 active listings</li></ul><button class="btn btn-ghost" type="button" data-partner="Owner Plus">Join the waitlist</button></article>
+      <article class="plan"><small>Small commercial</small><h3>Starter Business</h3><div class="pr">₱1,499 <span>/ month</span></div><p>Budget-friendly solution for small tech rental shops and local providers.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Feature list to be confirmed at launch</li></ul><button class="btn btn-ghost" type="button" data-partner="Starter Business">Join the waitlist</button></article>
+      <article class="plan"><small>Full enterprise</small><h3>Pro Business</h3><div class="pr">₱2,999 <span>/ month</span></div><p>Comprehensive fleet management for commercial rental operations.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Manage 100+ active units</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Automated remote-lock controls</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Priority technical support</li></ul><button class="btn btn-ghost" type="button" data-partner="Pro Business">Join the waitlist</button></article>
+    </div>
+    <p class="foot-note">Planned pricing, subject to change before launch. GPS tracking and remote lock depend on device compatibility, connectivity and renter consent.</p>
+  </div>
+</section>
+
+<!-- about -->
+<section class="sec" id="about" aria-labelledby="ab-h">
+  <div class="wrap about">
+    <figure class="ph" style="margin:0"><img src="img/store.jpg" alt="Renters collecting laptops, tablets and phones from staff at a bright rental counter" width="900" height="907" loading="lazy"><figcaption class="cap">Illustrative image of a RentSafe rental counter</figcaption></figure>
+    <div class="about-copy">
+      <span class="eyebrow">About RentSafe</span>
+      <h2 class="h2" id="ab-h">Built to make device rental trustworthy for everyone</h2>
+      <p class="lead">Device owners worry about theft, damage and late returns. Renters want a clear process and a fair record. RentSafe combines rental monitoring, countdowns, overdue alerts, rental records and administrator controls in one platform, starting with businesses and individuals in the Davao Region.</p>
+      <div class="sdg" aria-label="Sustainable Development Goals">
+        <span><b>SDG 12</b> Responsible consumption: share devices, extend hardware life</span>
+        <span><b>SDG 9</b> Innovation: smart security for tech rentals</span>
+        <span><b>SDG 8</b> Decent work: affordable tech access, protected owner income</span>
+      </div>
+      <p class="foot-note" style="margin:0">These are intended contributions. Actual impact depends on adoption and implementation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CTA -->
+<section class="cta" aria-labelledby="cta-h">
+  <div class="wrap">
+    <div><h2 id="cta-h">Ready to Experience a Safer Way to Rent?</h2><p>Join a smarter rental community where convenience and protection work together.</p></div>
+    <div class="cta-row" style="margin:0"><a class="btn btn-w" href="#rentals">Start Renting</a><a class="btn btn-o" href="#partner">List Your Equipment</a></div>
+  </div>
+</section>
+
+<!-- 11. FAQ -->
+<section class="sec" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq-wrap">
+    <div class="sec-head"><span class="eyebrow">FAQ</span><h2 class="h2" id="faq-h">Questions, answered</h2><p class="lead">Short answers about how renting and listing work. Final terms will be published before launch.</p></div>
+    <div class="acc" id="acc"></div>
+  </div>
+</section>
+</main>
+
+<!-- 12. FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="#home" aria-label="RentSafe home"><span class="mark"><img src="img/logo-mark.png" alt="" width="42" height="42" loading="lazy"></span><span><b>Rent</b><i style="color:#34D399">Safe</i></span></a>
+        <p class="desc">A secure device and equipment rental platform that helps owners and renters manage rentals with clear agreements, documented conditions and return monitoring.</p>
+      </div>
+      <nav aria-label="Company"><h4>Company</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#rentals">Browse Rentals</a></li><li><a href="#partner">Become a Partner</a></li></ul></nav>
+      <nav aria-label="Support"><h4>Support</h4><ul><li><a href="#faq">FAQ</a></li><li><button class="fl" type="button" data-support>Contact Us</button></li><li><button class="fl" type="button" data-soon="Privacy Policy">Privacy Policy</button></li><li><button class="fl" type="button" data-soon="Terms and Conditions">Terms and Conditions</button></li></ul></nav>
+      <div>
+        <p class="tagline">Rent Smarter. Stay Protected.</p>
+        <div class="soc" aria-label="Social media">
+          <button type="button" data-soon="Facebook page" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></button>
+          <button type="button" data-soon="Instagram page" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".8" fill="currentColor"/></svg></button>
+          <button type="button" data-soon="X profile" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3l-6.6 7.5L22 21h-6.1l-4.8-6.2L5.6 21h-3l7-8L2.2 3h6.2l4.3 5.7zm-1 16.2h1.7L7.3 4.7H5.5z"/></svg></button>
+          <button type="button" data-soon="LinkedIn page" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 9h3v10H5zm1.5-5a1.7 1.7 0 110 3.4 1.7 1.7 0 010-3.4zM10 9h2.9v1.4c.5-.9 1.6-1.6 3.1-1.6 3 0 3.6 2 3.6 4.6V19h-3v-5c0-1.2 0-2.7-1.7-2.7S13 12.600 13 14v5h-3z"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="f-bot"><span>© 2026 RentSafe. Design preview of the RentSafe website.</span><span>Secure device rental platform · Davao Region, Philippines</span></div>
+  </div>
+</footer>
+
+<!-- dialogs -->
+<dialog id="dlgDetail" aria-labelledby="dd-title"><button class="icon-btn dlg-x" type="button" data-close aria-label="Close details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div id="dlgDetailBody"></div></dialog>
+
+<dialog id="dlgBook" aria-labelledby="bk-title"><button class="icon-btn dlg-x" type="button" data-close aria-label="Close booking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <form class="d-body" id="bookForm" novalidate>
+    <div><h3 id="bk-title">Book this rental</h3><p id="bk-sub" style="color:var(--muted)"></p></div>
+    <div class="stepper" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+    <div class="note">Demo mode: nothing is sent, charged or saved. Backend booking connects when services are available.</div>
+    <div data-step="1" class="form-grid">
+      <div class="field"><label for="bkStart">Pickup date</label><input class="input" id="bkStart" type="date" required></div>
+      <div class="field"><label for="bkDays">Rental length</label><select class="select" id="bkDays"></select></div>
+      <div class="field"><label for="bkName">Full name</label><input class="input" id="bkName" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="bkEmail">Email</label><input class="input" id="bkEmail" type="email" autocomplete="email" required></div>
+      <div class="field full"><label for="bkWhere">Handover</label><select class="select" id="bkWhere"><option>Pickup at the partner's location</option><option>Meet-up at an agreed public place</option></select></div>
+      <div class="full err" id="err1" role="alert"></div>
+    </div>
+    <div data-step="2" hidden class="agree">
+      <div class="sum" id="sum"></div>
+      <label><input type="checkbox" id="agTerms"><span>I have read the sample rental agreement and accept the renter's responsibilities for this device.</span></label>
+      <label><input type="checkbox" id="agId"><span>I will complete identity verification and the before-rental condition check at handover.</span></label>
+      <div class="err" id="err2" role="alert"></div>
+    </div>
+    <div data-step="3" hidden class="done">
+      <div class="big"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div>
+      <h3>Booking request recorded</h3><p id="doneTxt" style="color:var(--muted);max-width:44ch"></p><div class="ref" id="ref"></div>
+      <p style="color:var(--muted);font-size:.85rem">Demo reference only. No booking exists in a real system.</p>
+    </div>
+    <div class="d-act"><button class="btn btn-ghost" type="button" id="bkBack" hidden>Back</button><button class="btn btn-primary" type="submit" id="bkNext">Continue</button></div>
+  </form>
+</dialog>
+
+<dialog id="dlgPartner" aria-labelledby="pp-title"><button class="icon-btn dlg-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <form class="d-body" id="partnerForm" novalidate>
+    <div><h3 id="pp-title">Join the partner waitlist</h3><p id="pp-sub" style="color:var(--muted)"></p></div>
+    <div class="form-grid">
+      <div class="field"><label for="ppName">Name or business</label><input class="input" id="ppName" type="text" required></div>
+      <div class="field"><label for="ppEmail">Email</label><input class="input" id="ppEmail" type="email" required></div>
+      <div class="field"><label for="ppCity">City</label><input class="input" id="ppCity" type="text" placeholder="Davao City"></div>
+      <div class="field"><label for="ppUnits">Devices to list</label><select class="select" id="ppUnits"><option>1 to 2</option><option>3 to 10</option><option>11 to 100</option><option>More than 100</option></select></div>
+      <div class="full err" id="ppErr" role="alert"></div>
+    </div>
+    <div class="note">Demo mode: this form does not send or store anything yet.</div>
+    <div class="d-act"><button class="btn btn-primary" type="submit">Submit interest</button></div>
+  </form>
+</dialog>
+
+<button class="fab" id="fab" type="button" aria-label="Contact support" aria-expanded="false" aria-controls="support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.500h8M8 12.500h5"/></svg></button>
+<div class="support" id="support" hidden role="dialog" aria-label="Contact support">
+  <h4>Need help renting or listing?</h4><p>Send us a message. This demo form does not send messages yet.</p>
+  <form id="supForm" novalidate style="display:grid;gap:10px">
+    <div class="field"><label class="sr" for="supEmail">Email</label><input class="input" id="supEmail" type="email" placeholder="Your email" required></div>
+    <div class="field"><label class="sr" for="supMsg">Message</label><textarea class="input" id="supMsg" rows="3" placeholder="How can we help?" required></textarea></div>
+    <button class="btn btn-primary btn-sm" type="submit">Send message</button>
+  </form>
+</div>
+<div id="toasts" role="status" aria-live="polite"></div>
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var peso=function(n){return '₱'+Number(n).toLocaleString('en-PH')};
+var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+var CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>';
+
+/* toast */
+function toast(msg){
+  var box=$('#toasts'),t=document.createElement('div');
+  t.className='toast';t.innerHTML=CHECK+'<span></span>';$('span',t).textContent=msg;box.appendChild(t);
+  setTimeout(function(){t.classList.add('out');setTimeout(function(){t.remove()},320)},4200);
+}
+
+/* theme */
+var root=document.documentElement;
+function curDark(){var t=root.getAttribute('data-theme');return t?t==='dark':(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)}
+try{var st=localStorage.getItem('rs-theme');if(st)root.setAttribute('data-theme',st)}catch(e){}
+$('#themeBtn').addEventListener('click',function(){
+  var n=curDark()?'light':'dark';root.setAttribute('data-theme',n);
+  try{localStorage.setItem('rs-theme',n)}catch(e){}
+  toast(n==='dark'?'Dark mode on':'Light mode on');
+});
+
+/* nav */
+var burger=$('#burger'),links=$('#navlinks');
+burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Close menu':'Open menu')});
+$$('a',links).forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');burger.setAttribute('aria-expanded','false')})});
+if('IntersectionObserver' in window){
+  var spy=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){$$('a',links).forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}
+  })},{rootMargin:'-40% 0px -55% 0px'});
+  ['home','how','categories','protection','rentals','partner','faq'].forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s)});
+}
+
+/* reveal on scroll (elements already in view stay untouched) */
+var io=null;
+if('IntersectionObserver' in window&&!reduce){
+  io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){var el=e.target;el.classList.add('rv','in');io.unobserve(el)}
+  })},{rootMargin:'0px 0px -8% 0px'});
+}
+function watch(els){
+  if(!io)return;
+  els.forEach(function(el,i){
+    if(el.getBoundingClientRect().top<window.innerHeight)return;
+    el.style.setProperty('--d',((i%4)*0.08)+'s');io.observe(el);
+  });
+}
+
+/* one-shot triggers */
+function once(el,fn){
+  if(!el)return;
+  if(!('IntersectionObserver' in window)||reduce)return;
+  var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){fn();o.disconnect()}},{threshold:.35});o.observe(el);
+}
+once($('#statGrid'),function(){
+  $$('[data-count]').forEach(function(b){
+    var end=+b.getAttribute('data-count'),suf=b.getAttribute('data-suffix')||'',t0=null,dur=1500;
+    function f(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur),v=Math.round(end*(1-Math.pow(1-p,3)));b.textContent=v.toLocaleString('en-US')+(p<1?'':suf);if(p<1)requestAnimationFrame(f)}
+    requestAnimationFrame(f);
+  });
+});
+once($('#steps'),function(){$('#stepsLine').classList.add('run')});
+once($('#cmp'),function(){$('#cmp').classList.add('go')});
+
+/* hero 3D tilt */
+var stage=$('#stage'),scene=$('#scene');
+if(stage&&!reduce){
+  stage.addEventListener('pointermove',function(e){
+    var r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    scene.style.setProperty('--ry',(x*16).toFixed(2)+'deg');scene.style.setProperty('--rx',(-y*12).toFixed(2)+'deg');
+  });
+  stage.addEventListener('pointerleave',function(){scene.style.setProperty('--ry','0deg');scene.style.setProperty('--rx','0deg')});
+}
+
+/* prototype timers */
+function hms(s){var h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return [h,m,x].map(function(n){return String(n).padStart(2,'0')}).join(':')}
+var left=38*60+8,over=12*60+57;
+setInterval(function(){
+  left=left>0?left-1:2*3600;over+=1;
+  $('#liveTimer').textContent=hms(left);$('#overTimer').textContent='+'+hms(over);
+},1000);
+
+/* prototype tabs */
+var tabA=$('#tab-a'),tabR=$('#tab-r');
+function showTab(which){
+  var a=which==='a';
+  tabA.setAttribute('aria-selected',a);tabR.setAttribute('aria-selected',!a);
+  tabA.tabIndex=a?0:-1;tabR.tabIndex=a?-1:0;
+  $('#panel-a').hidden=!a;$('#panel-r').hidden=a;
+}
+tabA.addEventListener('click',function(){showTab('a')});
+tabR.addEventListener('click',function(){showTab('r')});
+[tabA,tabR].forEach(function(t){t.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var a=t===tabA;showTab(a?'r':'a');(a?tabR:tabA).focus()}
+})});
+
+/* data */
+var CATS=[
+  {id:'phones',label:'Smartphones',chip:'Smartphones',sym:'phone'},
+  {id:'laptops',label:'Laptops and Computers',chip:'Laptops',sym:'laptop'},
+  {id:'cameras',label:'Cameras and Photography Equipment',chip:'Cameras',sym:'camera'},
+  {id:'gaming',label:'Gaming Consoles',chip:'Gaming',sym:'console'},
+  {id:'tablets',label:'Tablets and Accessories',chip:'Tablets',sym:'tablet'},
+  {id:'other',label:'Other Electronic Equipment',chip:'Other',sym:'drone'}
+];
+var P=['Demo Gadget Hub','Sample Lens House','Sample Student Gear','Demo Tech Rentals','Sample Play Corner'];
+var LIST=[
+  {id:1,name:'Flagship Smartphone 256GB',cat:'phones',sym:'phone',price:350,st:'available',p:0,desc:'Current-generation phone with a strong camera. Good for travel, events and content creators.',spec:[['Storage','256 GB'],['Camera','Triple lens'],['Includes','Case + charger']]},
+  {id:2,name:'Budget Android Phone 128GB',cat:'phones',sym:'phone',price:180,st:'available',p:2,desc:'Reliable everyday phone for short trips, a spare device or a temporary replacement.',spec:[['Storage','128 GB'],['Battery','2-day typical'],['Includes','Charger']]},
+  {id:3,name:'Ultrabook 14″ 16GB / 512GB',cat:'laptops',sym:'laptop',price:650,st:'available',p:3,desc:'Light, fast laptop for presentations, remote work and freelance deadlines.',spec:[['Memory','16 GB'],['Storage','512 GB SSD'],['Weight','1.3 kg']]},
+  {id:4,name:'Gaming Laptop 16GB + GPU',cat:'laptops',sym:'laptop',price:950,st:'rented',back:'Nov 14',p:4,desc:'Dedicated graphics for editing, rendering and gaming events. Includes cooling pad.',spec:[['Memory','16 GB'],['Graphics','Dedicated GPU'],['Includes','Cooling pad']]},
+  {id:5,name:'Student Notebook 8GB',cat:'laptops',sym:'laptop',price:400,st:'available',p:2,desc:'Simple, dependable notebook for papers, online classes and spreadsheets.',spec:[['Memory','8 GB'],['Storage','256 GB SSD'],['Battery','8 hours']]},
+  {id:6,name:'Mirrorless Camera Kit',cat:'cameras',sym:'camera',price:1100,st:'available',p:1,desc:'Body, kit lens, two batteries and a memory card for shoots, weddings and vlogs.',spec:[['Sensor','24 MP'],['Lens','Kit zoom'],['Includes','2 batteries, 64 GB card']]},
+  {id:7,name:'4K Action Camera',cat:'cameras',sym:'camera',price:420,st:'reserved',p:1,desc:'Waterproof housing and mounts for island trips, rides and sports.',spec:[['Video','4K 60 fps'],['Water','Waterproof housing'],['Includes','Mount set']]},
+  {id:8,name:'Game Console Bundle',cat:'gaming',sym:'console',price:600,st:'available',p:4,desc:'Console with two controllers and three party games for weekends and events.',spec:[['Controllers','2'],['Games','3 included'],['Output','HDMI 4K']]},
+  {id:9,name:'Handheld Gaming Console',cat:'gaming',sym:'console',price:350,st:'available',p:4,desc:'Portable console with carry case. Great for long trips.',spec:[['Screen','7″ display'],['Battery','4 hours'],['Includes','Case + charger']]},
+  {id:10,name:'10.9″ Tablet + Stylus',cat:'tablets',sym:'tablet',price:320,st:'available',p:0,desc:'Tablet with stylus for sketching, note-taking and presentations.',spec:[['Screen','10.9″'],['Storage','128 GB'],['Includes','Stylus + cover']]},
+  {id:11,name:'Learning Tablet 11″',cat:'tablets',sym:'tablet',price:250,st:'rented',back:'Nov 12',p:2,desc:'Sturdy tablet with a keyboard case for school projects and online classes.',spec:[['Screen','11″'],['Storage','64 GB'],['Includes','Keyboard case']]},
+  {id:12,name:'Compact 4K Drone',cat:'other',sym:'drone',price:1200,st:'available',p:1,desc:'Foldable drone with gimbal camera and three batteries for aerial footage.',spec:[['Video','4K'],['Flight time','30 min/battery'],['Includes','3 batteries']]},
+  {id:13,name:'Portable Party Speaker',cat:'other',sym:'speaker',price:280,st:'available',p:3,desc:'Loud, splash-resistant Bluetooth speaker for outings and small events.',spec:[['Battery','12 hours'],['Water','Splash-resistant'],['Connect','Bluetooth']]},
+  {id:14,name:'Mini Projector 1080p',cat:'other',sym:'projector',price:500,st:'available',p:3,desc:'Compact projector with a tripod for movie nights, pitches and classes.',spec:[['Resolution','1080p'],['Throw','Up to 100″'],['Includes','Tripod']]}
+];
+var PART=[
+  {n:P[0],t:'Individual partner',c:'Davao City'},{n:P[1],t:'Business partner',c:'Davao City'},{n:P[2],t:'Individual partner',c:'Davao City'},
+  {n:P[3],t:'Business partner',c:'Davao City'},{n:P[4],t:'Business partner',c:'Davao City'}
+];
+var byCat=function(c){return LIST.filter(function(x){return x.cat===c}).length};
+var catOf=function(id){return CATS.filter(function(c){return c.id===id})[0]};
+var svgDev=function(sym){return '<svg viewBox="0 0 200 150" aria-hidden="true"><use href="#d-'+sym+'"/></svg>'};
+var ini=function(n){return n.split(/\s+/).map(function(w){return w[0]}).slice(0,2).join('').toUpperCase()};
+
+/* categories */
+var catsEl=$('#cats');
+catsEl.innerHTML=CATS.map(function(c){
+  var n=byCat(c.id);
+  return '<article class="cat"><div class="pic">'+svgDev(c.sym)+'</div><div class="body"><div><h3>'+esc(c.label)+'</h3><small>'+n+' sample listing'+(n===1?'':'s')+'</small></div><button class="btn btn-ghost btn-sm" type="button" data-cat="'+c.id+'" aria-label="View items in '+esc(c.label)+'">View Items</button></div></article>';
+}).join('');
+watch($$('.cat'));
+
+/* marketplace */
+var S={q:'',cat:'all',max:1500,avail:false,sort:'feat'};
+var chips=$('#chips');
+function drawChips(){
+  var all=[{id:'all',chip:'All'}].concat(CATS);
+  chips.innerHTML=all.map(function(c){return '<button class="fc" type="button" data-chip="'+c.id+'" aria-pressed="'+(S.cat===c.id)+'">'+esc(c.chip)+'</button>'}).join('');
+}
+drawChips();
+chips.addEventListener('click',function(e){var b=e.target.closest('[data-chip]');if(!b)return;S.cat=b.getAttribute('data-chip');drawChips();render()});
+$('#q').addEventListener('input',function(e){S.q=e.target.value.trim().toLowerCase();render()});
+$('#price').addEventListener('input',function(e){S.max=+e.target.value;$('#priceOut').textContent=peso(S.max);render()});
+$('#sort').addEventListener('change',function(e){S.sort=e.target.value;render()});
+$('#avail').addEventListener('change',function(e){S.avail=e.target.checked;render()});
+$('#reset').addEventListener('click',reset);
+function reset(){
+  S={q:'',cat:'all',max:1500,avail:false,sort:'feat'};
+  $('#q').value='';$('#price').value=1500;$('#priceOut').textContent=peso(1500);$('#sort').value='feat';$('#avail').checked=false;
+  drawChips();render();
+}
+catsEl.addEventListener('click',function(e){
+  var b=e.target.closest('[data-cat]');if(!b)return;
+  S.cat=b.getAttribute('data-cat');drawChips();render();
+  document.getElementById('rentals').scrollIntoView({behavior:reduce?'auto':'smooth'});
+});
+
+function stLabel(x){return x.st==='available'?'Available':x.st==='rented'?'Rented until '+x.back:'Reserved'}
+function cardHTML(x){
+  var o=PART[x.p];
+  return '<article class="card" data-id="'+x.id+'"><div class="pic">'+svgDev(x.sym)+'<div class="tags"><span class="st '+x.st+'"><i></i>'+stLabel(x)+'</span><span class="demo-tag">Demo listing</span></div></div>'+
+  '<div class="info"><h3>'+esc(x.name)+'</h3><p class="desc">'+esc(x.desc)+'</p><div class="price"><b>'+peso(x.price)+'</b><span>/ day</span></div>'+
+  '<div class="owner"><span class="av" aria-hidden="true">'+ini(o.n.replace(/^(Demo|Sample)\s/,''))+'</span><div><b>'+esc(o.n)+'</b><small>'+esc(o.t)+' · '+esc(o.c)+'</small></div></div>'+
+  '<div class="acts"><button class="btn btn-ghost" type="button" data-detail="'+x.id+'">View Details</button><button class="btn btn-primary" type="button" data-book="'+x.id+'">'+(x.st==='available'?'Book Now':'Join waitlist')+'</button></div></div></article>';
+}
+var first=true;
+function render(){
+  var g=$('#grid');
+  var items=LIST.filter(function(x){
+    if(S.cat!=='all'&&x.cat!==S.cat)return false;
+    if(x.price>S.max)return false;
+    if(S.avail&&x.st!=='available')return false;
+    if(S.q){var hay=(x.name+' '+x.desc+' '+catOf(x.cat).label).toLowerCase();if(hay.indexOf(S.q)<0)return false}
+    return true;
+  });
+  if(S.sort==='lo')items.sort(function(a,b){return a.price-b.price});
+  if(S.sort==='hi')items.sort(function(a,b){return b.price-a.price});
+  if(S.sort==='az')items.sort(function(a,b){return a.name.localeCompare(b.name)});
+  $('#count').textContent='Showing '+items.length+' of '+LIST.length+' demonstration listings';
+  function paint(){
+    if(!items.length){g.innerHTML='<div class="empty"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M8.500 11h5"/></svg><b>No listings match these filters</b><span>Try a higher price limit or a different category.</span><button class="btn btn-ghost btn-sm" type="button" id="emptyReset">Reset filters</button></div>';var r=$('#emptyReset');if(r)r.addEventListener('click',reset);return}
+    g.innerHTML=items.map(cardHTML).join('');
+    if(!first)return;
+    watch($$('.card',g));
+  }
+  if(first&&!reduce){
+    g.innerHTML='<div class="skel"></div><div class="skel"></div><div class="skel"></div><div class="skel"></div>';
+    setTimeout(function(){paint();first=false},450);
+  }else{paint();first=false}
+}
+render();
+
+/* dialogs */
+function openDlg(d){if(typeof d.showModal==='function')d.showModal();else d.setAttribute('open','')}
+$$('dialog').forEach(function(d){
+  d.addEventListener('click',function(e){if(e.target===d)d.close()});
+  $$('[data-close]',d).forEach(function(b){b.addEventListener('click',function(){d.close()})});
+});
+var dDet=$('#dlgDetail'),dBook=$('#dlgBook'),dPart=$('#dlgPartner');
+function item(id){return LIST.filter(function(x){return x.id===+id})[0]}
+function depositOf(x){return Math.max(500,Math.round(x.price*3/50)*50)}
+
+function showDetail(id){
+  var x=item(id),o=PART[x.p];
+  $('#dlgDetailBody').innerHTML='<div class="d-pic">'+svgDev(x.sym)+'</div><div class="d-body">'+
+   '<div class="d-top"><div><span class="st '+x.st+'" style="margin-bottom:10px"><i></i>'+stLabel(x)+'</span><h3 id="dd-title">'+esc(x.name)+'</h3><p style="color:var(--muted);margin-top:4px">'+esc(catOf(x.cat).label)+' · Demo listing</p></div><div class="price"><b>'+peso(x.price)+'</b><span>/ day</span></div></div>'+
+   '<p>'+esc(x.desc)+'</p>'+
+   '<div class="spec">'+x.spec.map(function(s){return '<div><small>'+esc(s[0])+'</small>'+esc(s[1])+'</div>'}).join('')+'<div><small>Sample deposit</small>'+peso(depositOf(x))+'</div></div>'+
+   '<div class="owner" style="border-top:0;padding-top:0"><span class="av" aria-hidden="true">'+ini(o.n.replace(/^(Demo|Sample)\s/,''))+'</span><div><b>'+esc(o.n)+'</b><small>'+esc(o.t)+' · '+esc(o.c)+'</small></div></div>'+
+   '<div><h4 style="font-size:1rem;margin-bottom:10px">Planned protection steps</h4><ul class="prot">'+['Identity verification before handover','Refundable security deposit shown up front','Written rental agreement','Condition recorded before and after','Return-date monitoring and alerts','Structured damage and loss reporting'].map(function(t){return '<li>'+CHECK+'<span>'+t+'</span></li>'}).join('')+'</ul></div>'+
+   '<div class="d-act"><button class="btn btn-ghost" type="button" data-close2>Close</button><button class="btn btn-primary" type="button" data-book="'+x.id+'">'+(x.st==='available'?'Book Now':'Join waitlist')+'</button></div></div>';
+  openDlg(dDet);
+}
+document.addEventListener('click',function(e){
+  var d=e.target.closest('[data-detail]');if(d){showDetail(d.getAttribute('data-detail'));return}
+  var b=e.target.closest('[data-book]');if(b){startBook(b.getAttribute('data-book'));return}
+  if(e.target.closest('[data-close2]')){dDet.close();return}
+  var p=e.target.closest('[data-partner]');if(p){openPartner(p.getAttribute('data-partner'));return}
+  var s=e.target.closest('[data-soon]');if(s){toast(s.getAttribute('data-soon')+' will be available at launch.');return}
+  if(e.target.closest('[data-support]')){setSupport(true);return}
+});
+
+/* booking */
+var cur=null,step=1;
+function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+var fmt=function(d){return d.toLocaleDateString('en-PH',{month:'short',day:'numeric',year:'numeric'})};
+$('#bkDays').innerHTML=Array.apply(null,Array(14)).map(function(_,i){return '<option value="'+(i+1)+'">'+(i+1)+' day'+(i?'s':'')+'</option>'}).join('');
+function gotoStep(n){
+  step=n;
+  $$('[data-step]',dBook).forEach(function(s){s.hidden=(+s.getAttribute('data-step'))!==n});
+  $$('.stepper span',dBook).forEach(function(s,i){s.classList.toggle('on',i<n)});
+  $('#bkBack').hidden=n!==2;
+  $('#bkNext').textContent=n===1?'Continue':n===2?'Confirm booking':'Done';
+  if(n===2)drawSum();
+}
+function calc(){
+  var days=+$('#bkDays').value,start=new Date($('#bkStart').value+'T00:00:00'),end=new Date(start);end.setDate(end.getDate()+days);
+  return {days:days,start:start,end:end,rent:cur.price*days,dep:depositOf(cur)};
+}
+function drawSum(){
+  var c=calc();
+  $('#sum').innerHTML='<div><span>'+esc(cur.name)+'</span><span>'+peso(cur.price)+' × '+c.days+'</span></div><div><span>Rental total</span><b>'+peso(c.rent)+'</b></div><div><span>Refundable security deposit (sample)</span><b>'+peso(c.dep)+'</b></div><div><span>Pickup</span><span>'+fmt(c.start)+'</span></div><div><span>Return by</span><span>'+fmt(c.end)+'</span></div><div class="tot"><span>Total due now (sample)</span><span>'+peso(c.rent+c.dep)+'</span></div>';
+}
+function startBook(id){
+  cur=item(id);
+  if(cur.st!=='available'){dDet.open&&dDet.close();toast('You are on the demo waitlist for '+cur.name+'. Nothing is saved yet.');return}
+  if(dDet.open)dDet.close();
+  var t=new Date(),tm=new Date();tm.setDate(t.getDate()+1);
+  $('#bk-title').textContent='Book '+cur.name;
+  $('#bk-sub').textContent=peso(cur.price)+' per day · '+PART[cur.p].n;
+  $('#bkStart').min=iso(t);$('#bkStart').value=iso(tm);$('#bkDays').value='2';
+  $('#err1').textContent='';$('#err2').textContent='';$('#agTerms').checked=false;$('#agId').checked=false;
+  gotoStep(1);openDlg(dBook);
+}
+$('#bkBack').addEventListener('click',function(){gotoStep(1)});
+$('#bookForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  if(step===1){
+    var name=$('#bkName').value.trim(),mail=$('#bkEmail').value.trim(),sd=$('#bkStart').value,err=$('#err1');
+    if(!sd||sd<iso(new Date())){err.textContent='Choose a pickup date from today onward.';$('#bkStart').focus();return}
+    if(name.length<2){err.textContent='Enter your full name.';$('#bkName').focus();return}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)){err.textContent='Enter a valid email address, like name@example.com.';$('#bkEmail').focus();return}
+    err.textContent='';gotoStep(2);
+  }else if(step===2){
+    if(!$('#agTerms').checked||!$('#agId').checked){$('#err2').textContent='Please accept both statements to continue.';return}
+    $('#err2').textContent='';
+    var c=calc(),code='RS-DEMO-'+Math.random().toString(36).slice(2,6).toUpperCase();
+    $('#ref').textContent=code;
+    $('#doneTxt').textContent=cur.name+' from '+fmt(c.start)+' to '+fmt(c.end)+'. In the live platform, the partner would now confirm your handover and verification.';
+    gotoStep(3);toast('Booking request recorded (demo).');
+  }else{dBook.close()}
+});
+
+/* partner waitlist */
+function openPartner(plan){
+  $('#pp-sub').textContent='Plan: '+plan+'. Tell us about your equipment and we will reach out at launch.';
+  $('#ppErr').textContent='';openDlg(dPart);
+}
+$('#partnerForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=$('#ppName').value.trim(),m=$('#ppEmail').value.trim();
+  if(n.length<2){$('#ppErr').textContent='Enter your name or business name.';$('#ppName').focus();return}
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){$('#ppErr').textContent='Enter a valid email address.';$('#ppEmail').focus();return}
+  dPart.close();toast('Thanks, '+n+'. Interest recorded in this demo only.');this.reset();
+});
+
+/* support */
+var fab=$('#fab'),sup=$('#support');
+function setSupport(o){sup.hidden=!o;fab.setAttribute('aria-expanded',o);if(o)$('#supEmail').focus()}
+fab.addEventListener('click',function(){setSupport(sup.hidden)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!sup.hidden)setSupport(false)});
+$('#supForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var m=$('#supEmail').value.trim(),t=$('#supMsg').value.trim();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)||t.length<3){toast('Add a valid email and a short message first.');return}
+  setSupport(false);this.reset();toast('Message noted in this demo. Support chat is not connected yet.');
+});
+
+/* testimonials */
+var T=[
+  {n:'Mia R.',r:'Renter · Freelance video editor',s:5,q:'I needed a laptop for a rush project. Seeing the return time and deposit up front made it easy to say yes.'},
+  {n:'Carlo D.',r:'Owner · Small gadget shop',s:5,q:'Having rental terms and device condition written down means fewer arguments at the counter.'},
+  {n:'Jen S.',r:'Renter · Event organizer',s:4,q:'Booking a projector and speaker for a seminar took minutes, and the reminder before the return date helped.'},
+  {n:'Paolo M.',r:'Owner · Individual lender',s:5,q:'An overdue alert beats chasing people through messages. I know where each unit stands.'},
+  {n:'Ana L.',r:'Renter · Student',s:5,q:'I could rent a tablet for a few days instead of buying one. Reporting a scratch was simple.'}
+];
+var star='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.500l2.9 6 6.600.9-4.800 4.600 1.200 6.500L12 17.400 6.100 20.500l1.200-6.500L2.500 9.400l6.600-.9z"/></svg>';
+var tr=$('#track');
+tr.innerHTML=T.map(function(t){
+  return '<article class="tcard"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><div class="stars" role="img" aria-label="'+t.s+' out of 5 stars">'+Array(t.s+1).join(star)+'</div><span class="sample-tag">Sample</span></div><blockquote>“'+esc(t.q)+'”</blockquote><div class="who"><span class="av" aria-hidden="true">'+ini(t.n)+'</span><div><b>'+esc(t.n)+'</b><small>'+esc(t.r)+'</small></div></div></article>';
+}).join('');
+watch($$('.tcard'));
+var dots=$('#dots');
+dots.innerHTML=T.map(function(_,i){return '<button type="button" aria-label="Show testimonial '+(i+1)+'" data-i="'+i+'"></button>'}).join('');
+function cards(){return $$('.tcard',tr)}
+function curIdx(){var c=cards(),l=tr.scrollLeft,best=0,d=1e9;c.forEach(function(el,i){var k=Math.abs(el.offsetLeft-tr.offsetLeft-l);if(k<d){d=k;best=i}});return best}
+function mark(){var i=curIdx();$$('button',dots).forEach(function(b,k){b.setAttribute('aria-current',k===i)})}
+function go(i){var c=cards();i=(i+c.length)%c.length;tr.scrollTo({left:c[i].offsetLeft-tr.offsetLeft,behavior:reduce?'auto':'smooth'})}
+tr.addEventListener('scroll',function(){window.requestAnimationFrame(mark)});
+$('#prev').addEventListener('click',function(){go(curIdx()-1)});
+$('#next').addEventListener('click',function(){go(curIdx()+1)});
+dots.addEventListener('click',function(e){var b=e.target.closest('[data-i]');if(b)go(+b.getAttribute('data-i'))});
+mark();
+var hold=false;
+['mouseenter','focusin','touchstart'].forEach(function(ev){tr.addEventListener(ev,function(){hold=true})});
+['mouseleave','focusout'].forEach(function(ev){tr.addEventListener(ev,function(){hold=false})});
+if(!reduce)setInterval(function(){if(hold||document.hidden)return;var r=tr.getBoundingClientRect();if(r.bottom<0||r.top>window.innerHeight)return;go(curIdx()+1)},6500);
+
+/* FAQ */
+var FAQ=[
+  ['What is RentSafe?','RentSafe is a secure device and equipment rental platform. It brings rental monitoring, countdowns, overdue alerts, rental records and administrator controls together so owners and renters can rent with more clarity and less risk.'],
+  ['How does RentSafe protect rental owners?','Owners get identity verification, security deposits, written rental agreements, before-and-after condition records, return-date monitoring and structured damage and loss reports. These tools are designed to reduce risk. They cannot remove it completely.'],
+  ['How can I rent an item?','Browse the listings, choose a rental period, submit your booking, complete the required verification and condition check at handover, then return the item on time. Your renter dashboard shows the live countdown and rental details.'],
+  ['Are security deposits required?','Partners set the deposit for each item. The amount is shown before you book, and the refund conditions are written into the rental agreement. The amounts on this demo site are samples.'],
+  ['What happens if an item gets damaged?','Renters report damage through a structured form on their dashboard. The owner reviews the report against the condition record taken at handover. Review and dispute steps will be published in the final rental terms.'],
+  ['What happens if a renter fails to return an item?','The owner receives an overdue alert once the return time passes and can follow the steps in the rental agreement, including the deposit. Where the device supports it and the renter has consented, remote lock and location views are available to the owner.'],
+  ['How can I become a rental partner?','Choose a plan in the partner section and join the waitlist. Individuals can start free with up to two listings. Shops and fleets can move to business plans as they grow.']
+];
+var acc=$('#acc');
+acc.innerHTML=FAQ.map(function(f,i){
+  return '<div class="q'+(i===0?' open':'')+'"><h3><button type="button" id="qb'+i+'" aria-expanded="'+(i===0)+'" aria-controls="qa'+i+'"><span>'+esc(f[0])+'</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button></h3><div class="a" id="qa'+i+'" role="region" aria-labelledby="qb'+i+'"><div><p>'+esc(f[1])+'</p></div></div></div>';
+}).join('');
+acc.addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;
+  var q=b.closest('.q'),was=q.classList.contains('open');
+  $$('.q',acc).forEach(function(x){x.classList.remove('open');$('button',x).setAttribute('aria-expanded','false')});
+  if(!was){q.classList.add('open');b.setAttribute('aria-expanded','true')}
+});
+
+/* reveal for remaining static blocks */
+watch($$('.sec-head,.step,.feat,.plan,.q,.stat'));
+})();
+</script>
+
+</body></html>
